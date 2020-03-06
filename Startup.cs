@@ -21,6 +21,8 @@ namespace DITest
                     .ConfigurePrimaryHttpMessageHandler(
                             x => new HttpClientHandler()
                             { MaxConnectionsPerServer = 22 }) ;
+            builder.Services.AddTransient<IDependencyOne, DependencyOne>();
+            builder.Services.AddTransient<IDependencyTwo, DependencyTwo>();
 
         }
 
